@@ -210,3 +210,4 @@ C:\Users\remna\Csharp\Wish_List\backend\WishList\WishList.API\obj\Debug\net8.0\r
 C:\Users\remna\Csharp\Wish_List\backend\WishList\WishList.API\obj\Debug\net8.0\WishList.API.pdb
 C:\Users\remna\Csharp\Wish_List\backend\WishList\WishList.API\obj\Debug\net8.0\WishList.API.genruntimeconfig.cache
 C:\Users\remna\Csharp\Wish_List\backend\WishList\WishList.API\obj\Debug\net8.0\ref\WishList.API.dll
+C:\Users\remna\Csharp\Wish_List\backend\WishList\WishList.API\obj\Debug\net8.0\WishList.API.sourcelink.json

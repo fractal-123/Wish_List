@@ -12,8 +12,8 @@ using WishList.DataAccess.Postgres;
 namespace WishList.DataAccess.Postgres.Migrations
 {
     [DbContext(typeof(WishListDbContext))]
-    [Migration("20240731114733_initial")]
-    partial class initial
+    [Migration("20240925170020_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -35,6 +35,10 @@ namespace WishList.DataAccess.Postgres.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Link")
                         .IsRequired()
                         .HasColumnType("text");
 

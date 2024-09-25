@@ -22,3 +22,4 @@ C:\Users\remna\Csharp\Wish_List\backend\WishList\WishList.DataAccess.Postgres\ob
 C:\Users\remna\Csharp\Wish_List\backend\WishList\WishList.DataAccess.Postgres\obj\Debug\net8.0\refint\WishList.DataAccess.Postgres.dll
 C:\Users\remna\Csharp\Wish_List\backend\WishList\WishList.DataAccess.Postgres\obj\Debug\net8.0\WishList.DataAccess.Postgres.pdb
 C:\Users\remna\Csharp\Wish_List\backend\WishList\WishList.DataAccess.Postgres\obj\Debug\net8.0\ref\WishList.DataAccess.Postgres.dll
+C:\Users\remna\Csharp\Wish_List\backend\WishList\WishList.DataAccess.Postgres\obj\Debug\net8.0\WishList.DataAccess.Postgres.sourcelink.json

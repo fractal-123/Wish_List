@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.click {
+  position: absolute;
+  left: 43%;
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  gap: 20px;
+}
+
+.open-btn {
+}
+.left-list {
+  position: absolute; /* Абсолютное позиционирование */
+  left: 0;
+  top: 0;
+  padding: 40px;
+  flex-direction: column;
+  display: flex;
+  gap: 20px;
+}
+.right-list {
+  list-style-type: none;
+  float: right;
+  flex-direction: column;
+  display: flex;
+  gap: 20px;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  padding: 40px;
+}

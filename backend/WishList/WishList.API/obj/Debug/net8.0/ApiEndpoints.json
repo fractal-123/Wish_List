@@ -17,7 +17,7 @@
   },
   {
     "ContainingType": "WishList.API.Controllers.WishController",
-    "Method": "Get",
+    "Method": "GetOptions",
     "RelativePath": "Wish",
     "HttpMethod": "GET",
     "IsController": true,

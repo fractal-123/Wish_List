@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using WishList.DataAccess.Postgres.Interface;
 
 namespace WishList.DataAccess.Postgres.Repositories
 {
-    /*public class WishRepository
+    public class WishRepository: IWishRepository
 
     {
         private readonly WishListDbContext _dbContext;
@@ -14,10 +15,14 @@ namespace WishList.DataAccess.Postgres.Repositories
 
         public async Task<List<WishEntity>> Get()
         {
-            return await _dbContext.Wish
+            var wishEntity= await _dbContext.Wish
                 .AsNoTracking()
-                .OrderBy(c =>c.Price)
                 .ToListAsync();
+
+            var wish = wishEntity
+                .Select(b => WishEntity.Create(b.Id,b.Name,b.Price,b.Description, b.Link,b.Created).Wish)
+                .ToList();
+            return wish;
         }
-    }*/
+    }
 }

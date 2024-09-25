@@ -53,8 +53,8 @@
     "C:\\Users\\remna\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
     "C:\\Users\\remna\\.nuget\\packages\\system.threading.channels\\6.0.0\\system.threading.channels.6.0.0.nupkg.sha512",
     "C:\\Users\\remna\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\8.0.2\\microsoft.netcore.app.runtime.linux-x64.8.0.2.nupkg.sha512",
-    "C:\\Users\\remna\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\8.0.2\\microsoft.netcore.app.host.linux-x64.8.0.2.nupkg.sha512",
-    "C:\\Users\\remna\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\8.0.2\\microsoft.aspnetcore.app.runtime.linux-x64.8.0.2.nupkg.sha512"
+    "C:\\Users\\remna\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\8.0.2\\microsoft.aspnetcore.app.runtime.linux-x64.8.0.2.nupkg.sha512",
+    "C:\\Users\\remna\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\8.0.2\\microsoft.netcore.app.host.linux-x64.8.0.2.nupkg.sha512"
   ],
   "logs": []
 }
