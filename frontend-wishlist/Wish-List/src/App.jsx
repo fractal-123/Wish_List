@@ -1,81 +1,32 @@
-import { Button, Input } from '@chakra-ui/react';
-import './App.css'
-import Wish from './components/Wish';
-import Modal from "./Modal/Modal";
-import { useEffect, useState } from 'react';
-import { fetchWish, createWish } from '../services/wish';
-import Filters from './components/Filter';
-import {Reorder} from 'framer-motion';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
+import Home from './Pages/Home';
+import WishList from './Pages/WishList';
 
 function App() {
-  const[wishs, setWish] =  useState([]);
-  const[filter,setFilter] = useState({
-    search: "",
-    sortItem: "date",
-    sortOrder: "desc",
 
-    });
-
-  useEffect(() => {
-    const fetchData = async () => {
-      let wishs  = await fetchWish(filter);
-      setWish(wishs);
-    };
-
-    fetchData();
-  }, [filter]);
-  
-    const onCreate = async (wish) => {
-    await createWish(wish)
-    let wishs = await fetchWish(filter)
-    setWish(wishs);
-   
-   };
-
-  
-  const[modalActive, setModalActive] = useState(true);
-
-  
 
   return (
-    
-    <section className='p-8 flex flex-row z-10'>
-      
-      <Reorder.Group className='left-list' axis='y' values={wishs} onReorder={setWish} >
-        {wishs.map((n) => (
-          <Reorder.Item key ={n.id} value={n} whileDrag={{scale: 1.1}} >
-            <Wish 
-              name={n.name} 
-              description={n.description} 
-              price={n.price}
-              created={n.created}
-            />
-          </Reorder.Item>
-        ))}
-      </Reorder.Group >
+    <Router>
+      <div>
+        <header className='bg-slate-500 w-full h-14'>
+          <ul className="flex gap-3">
+            <li><Link to="/home">Главная</Link></li>
+            <li><Link to="/wishlist">Wish List</Link></li>
+          </ul>
+        </header>
 
-      <div className='click' >
-        <Button className='open-button' onClick={() => setModalActive(true)}>Открыть</Button>
-        <Filters filter={filter} setFilter ={setFilter} />
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route
+            path="/wishlist"
+            element={
+              <WishList/>
+            }
+          />
+        </Routes>
       </div>
-
-      <ul className='right-list'>
-        {wishs.map((n) => (
-          <li key ={n.id}  >
-            <Wish 
-              name={n.name} 
-              description={n.description} 
-              price={n.price}
-              created={n.created}
-            />
-          </li>
-        ))}
-      </ul>
-
-      <Modal active={modalActive} setActive={setModalActive}  onCreate = {onCreate}/>  
-      
-    </section>
-    
+    </Router>
   );
 }
 

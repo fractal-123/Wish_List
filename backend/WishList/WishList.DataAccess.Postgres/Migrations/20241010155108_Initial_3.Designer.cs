@@ -12,15 +12,15 @@ using WishList.DataAccess.Postgres;
 namespace WishList.DataAccess.Postgres.Migrations
 {
     [DbContext(typeof(WishListDbContext))]
-    [Migration("20240925170020_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20241010155108_Initial_3")]
+    partial class Initial_3
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.6")
+                .HasAnnotation("ProductVersion", "8.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -39,7 +39,6 @@ namespace WishList.DataAccess.Postgres.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("Link")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Name")

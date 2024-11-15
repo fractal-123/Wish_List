@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\WishList.API",
-    "\\WishList.DataAccess.Postgres"
+    "\\WishList.API\\Controllers",
+    "\\WishList.DataAccess.Postgres",
+    "\\WishList.DataAccess.Postgres\\Configurations",
+    "\\WishList.DataAccess.Postgres\\Models"
   ],
-  "SelectedNode": "\\WishList.API\\appsettings.Development.json",
+  "SelectedNode": "\\WishList.API\\Controllers\\WishController.cs",
   "PreviewInSolutionExplorer": false
 }

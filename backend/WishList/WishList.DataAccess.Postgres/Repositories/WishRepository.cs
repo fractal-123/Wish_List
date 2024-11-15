@@ -20,7 +20,7 @@ namespace WishList.DataAccess.Postgres.Repositories
                 .ToListAsync();
 
             var wish = wishEntity
-                .Select(b => WishEntity.Create(b.Id,b.Name,b.Price,b.Description, b.Link,b.Created).Wish)
+                .Select(b => WishEntity.Create(b.Id,/*b.UserId,*/ b.Name,b.Price,b.Description, b.Link,b.Created).Wish)
                 .ToList();
             return wish;
         }

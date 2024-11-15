@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "nACc2AeKEXOqpE93oAVsw0DzNRDhAdAcIRxYFF996v4=",
+  "Hash": "jnQdU2tKAt705JQzc/dc/syAocA1viQ4+580U2zunj8=",
   "Source": "WishList.API",
   "BasePath": "_content/WishList.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

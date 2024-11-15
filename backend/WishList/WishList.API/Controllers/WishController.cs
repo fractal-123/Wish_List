@@ -25,7 +25,7 @@ namespace WishList.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateWishRequest request, CancellationToken clt)
         {
-            var wish = new WishEntity(request.Name, request.Price, request.Description, request.Link);
+            var wish = new WishEntity(/*request.UserID, */request.Name, request.Price, request.Description, request.Link);
 
             await _dbContext.AddAsync(wish, clt);
             await _dbContext.SaveChangesAsync(clt);
@@ -38,7 +38,7 @@ namespace WishList.API.Controllers
         {
             var wishQuery = _dbContext.Wish
                 .Where(n => string.IsNullOrEmpty(request.Search) ||
-                n.Name.ToLower().Contains(request.Search.ToLower())); //15.51 закончит тайм код)))
+                n.Name.ToLower().Contains(request.Search.ToLower())); 
 
             Expression<Func<WishEntity, object>> selectorKey = request.SortItem?.ToLower() switch
             {
@@ -56,21 +56,12 @@ namespace WishList.API.Controllers
                 wishQuery = wishQuery.OrderBy(n => n.Created);
             }
             var wishDtos = await wishQuery
-                .Select(n => new WishDTO(n.Id, n.Name, n.Price, n.Description, n.Link, n.Created))
+                .Select(n => new WishDTO(n.Id,/*n.UserId , */n.Name, n.Price, n.Description, n.Link, n.Created))
                 .ToListAsync(clt);
 
             return Ok(new GetWishResponse(wishDtos));
         }
-        /*[HttpGet]
-        public async Task<ActionResult<List<GetWishRequest>>> GetWish(CancellationToken clt)
-        {
-            var wish = await _wishService.GetAllWish();
-
-            var response = wish.Select(b => new WishDTO(b.Id, b.Name, b.Price, b.Description, b.Created));
-                
-
-            return Ok(response);
-        }*/
+        
 
 
 
