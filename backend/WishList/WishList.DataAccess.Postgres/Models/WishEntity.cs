@@ -5,9 +5,9 @@ public class WishEntity
 
     const int MAX_TITLE_LENGTH = 250;
 
-    public WishEntity(/*Guid userID,*/ string name, decimal price, string description, string? link) 
+    public WishEntity(string name, decimal price, string description, string? link) 
     {
-        //UserId = userID;
+          
         Name = name; 
         Price = price;
         Description = description;
@@ -38,7 +38,7 @@ public class WishEntity
     public DateTime Created { get; set;}
 
 
-    public static (WishEntity Wish, string Error ) Create(Guid id, /*Guid userID ,*/string name, decimal price, string description, string link, DateTime DateTime)
+    public static (WishEntity Wish, string Error ) Create(string name, decimal price, string description, string link, DateTime DateTime)
     {
         var error = string.Empty;
 
@@ -47,7 +47,7 @@ public class WishEntity
             error = " Title can not be empty or longer 250";
         }
 
-        var wish = new WishEntity(/*userID,*/name,price,description,link);
+        var wish = new WishEntity(name,price,description,link);
 
         return (wish,error);
     }

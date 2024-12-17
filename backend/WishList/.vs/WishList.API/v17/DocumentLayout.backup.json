@@ -3,68 +3,48 @@
   "WorkspaceRootPath": "C:\\Csharp\\Wish_List\\backend\\WishList\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{85EA25D9-86F8-43CA-B4AB-E28F81BEE94C}|WishList.DataAccess.Postgres\\WishList.DataAccess.Postgres.csproj|c:\\csharp\\wish_list\\backend\\wishlist\\wishlist.dataaccess.postgres\\wishlistdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85EA25D9-86F8-43CA-B4AB-E28F81BEE94C}|WishList.DataAccess.Postgres\\WishList.DataAccess.Postgres.csproj|solutionrelative:wishlist.dataaccess.postgres\\wishlistdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{85EA25D9-86F8-43CA-B4AB-E28F81BEE94C}|WishList.DataAccess.Postgres\\WishList.DataAccess.Postgres.csproj|c:\\csharp\\wish_list\\backend\\wishlist\\wishlist.dataaccess.postgres\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85EA25D9-86F8-43CA-B4AB-E28F81BEE94C}|WishList.DataAccess.Postgres\\WishList.DataAccess.Postgres.csproj|solutionrelative:wishlist.dataaccess.postgres\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|c:\\csharp\\wish_list\\backend\\wishlist\\wishlist.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|solutionrelative:wishlist.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{85EA25D9-86F8-43CA-B4AB-E28F81BEE94C}|WishList.DataAccess.Postgres\\WishList.DataAccess.Postgres.csproj|c:\\csharp\\wish_list\\backend\\wishlist\\wishlist.dataaccess.postgres\\models\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{85EA25D9-86F8-43CA-B4AB-E28F81BEE94C}|WishList.DataAccess.Postgres\\WishList.DataAccess.Postgres.csproj|solutionrelative:wishlist.dataaccess.postgres\\models\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{85EA25D9-86F8-43CA-B4AB-E28F81BEE94C}|WishList.DataAccess.Postgres\\WishList.DataAccess.Postgres.csproj|c:\\csharp\\wish_list\\backend\\wishlist\\wishlist.dataaccess.postgres\\models\\wishentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85EA25D9-86F8-43CA-B4AB-E28F81BEE94C}|WishList.DataAccess.Postgres\\WishList.DataAccess.Postgres.csproj|solutionrelative:wishlist.dataaccess.postgres\\models\\wishentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{85EA25D9-86F8-43CA-B4AB-E28F81BEE94C}|WishList.DataAccess.Postgres\\WishList.DataAccess.Postgres.csproj|c:\\csharp\\wish_list\\backend\\wishlist\\wishlist.dataaccess.postgres\\models\\wishlistentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{85EA25D9-86F8-43CA-B4AB-E28F81BEE94C}|WishList.DataAccess.Postgres\\WishList.DataAccess.Postgres.csproj|solutionrelative:wishlist.dataaccess.postgres\\models\\wishlistentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|c:\\csharp\\wish_list\\backend\\wishlist\\wishlist.api\\services\\wishservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|solutionrelative:wishlist.api\\services\\wishservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85EA25D9-86F8-43CA-B4AB-E28F81BEE94C}|WishList.DataAccess.Postgres\\WishList.DataAccess.Postgres.csproj|c:\\csharp\\wish_list\\backend\\wishlist\\wishlist.dataaccess.postgres\\repositories\\wishrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85EA25D9-86F8-43CA-B4AB-E28F81BEE94C}|WishList.DataAccess.Postgres\\WishList.DataAccess.Postgres.csproj|solutionrelative:wishlist.dataaccess.postgres\\repositories\\wishrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85EA25D9-86F8-43CA-B4AB-E28F81BEE94C}|WishList.DataAccess.Postgres\\WishList.DataAccess.Postgres.csproj|c:\\csharp\\wish_list\\backend\\wishlist\\wishlist.dataaccess.postgres\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85EA25D9-86F8-43CA-B4AB-E28F81BEE94C}|WishList.DataAccess.Postgres\\WishList.DataAccess.Postgres.csproj|solutionrelative:wishlist.dataaccess.postgres\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|c:\\csharp\\wish_list\\backend\\wishlist\\wishlist.api\\contracts\\createwishrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|solutionrelative:wishlist.api\\contracts\\createwishrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|c:\\csharp\\wish_list\\backend\\wishlist\\wishlist.api\\contracts\\getwishrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|solutionrelative:wishlist.api\\contracts\\getwishrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|c:\\csharp\\wish_list\\backend\\wishlist\\wishlist.api\\contracts\\getwishresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|solutionrelative:wishlist.api\\contracts\\getwishresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|c:\\csharp\\wish_list\\backend\\wishlist\\wishlist.api\\controllers\\wishcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|solutionrelative:wishlist.api\\controllers\\wishcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|c:\\csharp\\wish_list\\backend\\wishlist\\wishlist.api\\dto\\wishdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|solutionrelative:wishlist.api\\dto\\wishdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85EA25D9-86F8-43CA-B4AB-E28F81BEE94C}|WishList.DataAccess.Postgres\\WishList.DataAccess.Postgres.csproj|c:\\csharp\\wish_list\\backend\\wishlist\\wishlist.dataaccess.postgres\\interface\\iwishservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85EA25D9-86F8-43CA-B4AB-E28F81BEE94C}|WishList.DataAccess.Postgres\\WishList.DataAccess.Postgres.csproj|solutionrelative:wishlist.dataaccess.postgres\\interface\\iwishservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85EA25D9-86F8-43CA-B4AB-E28F81BEE94C}|WishList.DataAccess.Postgres\\WishList.DataAccess.Postgres.csproj|c:\\csharp\\wish_list\\backend\\wishlist\\wishlist.dataaccess.postgres\\interface\\iwishrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85EA25D9-86F8-43CA-B4AB-E28F81BEE94C}|WishList.DataAccess.Postgres\\WishList.DataAccess.Postgres.csproj|solutionrelative:wishlist.dataaccess.postgres\\interface\\iwishrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{85EA25D9-86F8-43CA-B4AB-E28F81BEE94C}|WishList.DataAccess.Postgres\\WishList.DataAccess.Postgres.csproj|c:\\csharp\\wish_list\\backend\\wishlist\\wishlist.dataaccess.postgres\\configurations\\wishconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{85EA25D9-86F8-43CA-B4AB-E28F81BEE94C}|WishList.DataAccess.Postgres\\WishList.DataAccess.Postgres.csproj|solutionrelative:wishlist.dataaccess.postgres\\configurations\\wishconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{85EA25D9-86F8-43CA-B4AB-E28F81BEE94C}|WishList.DataAccess.Postgres\\WishList.DataAccess.Postgres.csproj|c:\\csharp\\wish_list\\backend\\wishlist\\wishlist.dataaccess.postgres\\configurations\\wishlistconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85EA25D9-86F8-43CA-B4AB-E28F81BEE94C}|WishList.DataAccess.Postgres\\WishList.DataAccess.Postgres.csproj|solutionrelative:wishlist.dataaccess.postgres\\configurations\\wishlistconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|c:\\csharp\\wish_list\\backend\\wishlist\\wishlist.api\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|solutionrelative:wishlist.api\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|c:\\csharp\\wish_list\\backend\\wishlist\\wishlist.api\\dto\\wishdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|solutionrelative:wishlist.api\\dto\\wishdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|c:\\csharp\\wish_list\\backend\\wishlist\\wishlist.api\\contracts\\getuserresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|solutionrelative:wishlist.api\\contracts\\getuserresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|c:\\csharp\\wish_list\\backend\\wishlist\\wishlist.api\\contracts\\getuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|solutionrelative:wishlist.api\\contracts\\getuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|c:\\csharp\\wish_list\\backend\\wishlist\\wishlist.api\\contracts\\getwishresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C0ABC03-F10D-48B2-9BF7-CB930B202729}|WishList.API\\WishList.API.csproj|solutionrelative:wishlist.api\\contracts\\getwishresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -87,15 +67,123 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "WishListDbContext.cs",
-              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\WishListDbContext.cs",
-              "RelativeDocumentMoniker": "WishList.DataAccess.Postgres\\WishListDbContext.cs",
-              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\WishListDbContext.cs",
-              "RelativeToolTip": "WishList.DataAccess.Postgres\\WishListDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAKAAAAAAAAAA==",
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "WishList.DataAccess.Postgres\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "WishList.DataAccess.Postgres\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T11:31:35.703Z",
+              "WhenOpened": "2024-12-15T13:59:54.154Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "WishList.API\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Controllers\\UserController.cs",
+              "RelativeToolTip": "WishList.API\\Controllers\\UserController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA5wDMAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T14:42:39.904Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WishController.cs",
+              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Controllers\\WishController.cs",
+              "RelativeDocumentMoniker": "WishList.API\\Controllers\\WishController.cs",
+              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Controllers\\WishController.cs",
+              "RelativeToolTip": "WishList.API\\Controllers\\WishController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAswCkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T14:30:58.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WishConfiguration.cs",
+              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\Configurations\\WishConfiguration.cs",
+              "RelativeDocumentMoniker": "WishList.DataAccess.Postgres\\Configurations\\WishConfiguration.cs",
+              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\Configurations\\WishConfiguration.cs",
+              "RelativeToolTip": "WishList.DataAccess.Postgres\\Configurations\\WishConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T14:30:53.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserEntity.cs",
+              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\Models\\UserEntity.cs",
+              "RelativeDocumentMoniker": "WishList.DataAccess.Postgres\\Models\\UserEntity.cs",
+              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\Models\\UserEntity.cs",
+              "RelativeToolTip": "WishList.DataAccess.Postgres\\Models\\UserEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T14:25:39.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WishDTO.cs",
+              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Dto\\WishDTO.cs",
+              "RelativeDocumentMoniker": "WishList.API\\Dto\\WishDTO.cs",
+              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Dto\\WishDTO.cs",
+              "RelativeToolTip": "WishList.API\\Dto\\WishDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T14:24:58.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserDTO.cs",
+              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Dto\\UserDTO.cs",
+              "RelativeDocumentMoniker": "WishList.API\\Dto\\UserDTO.cs",
+              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Dto\\UserDTO.cs",
+              "RelativeToolTip": "WishList.API\\Dto\\UserDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T14:24:57.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GetUserResponse.cs",
+              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Contracts\\GetUserResponse.cs",
+              "RelativeDocumentMoniker": "WishList.API\\Contracts\\GetUserResponse.cs",
+              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Contracts\\GetUserResponse.cs",
+              "RelativeToolTip": "WishList.API\\Contracts\\GetUserResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T14:24:17.187Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GetUserRequest.cs",
+              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Contracts\\GetUserRequest.cs",
+              "RelativeDocumentMoniker": "WishList.API\\Contracts\\GetUserRequest.cs",
+              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Contracts\\GetUserRequest.cs",
+              "RelativeToolTip": "WishList.API\\Contracts\\GetUserRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T14:21:44.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GetWishResponse.cs",
+              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Contracts\\GetWishResponse.cs",
+              "RelativeDocumentMoniker": "WishList.API\\Contracts\\GetWishResponse.cs",
+              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Contracts\\GetWishResponse.cs",
+              "RelativeToolTip": "WishList.API\\Contracts\\GetWishResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T16:39:50.949Z"
             },
             {
               "$type": "Document",
@@ -107,190 +195,7 @@
               "RelativeToolTip": "WishList.DataAccess.Postgres\\Models\\WishListEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T11:31:32.037Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WishService.cs",
-              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Services\\WishService.cs",
-              "RelativeDocumentMoniker": "WishList.API\\Services\\WishService.cs",
-              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Services\\WishService.cs",
-              "RelativeToolTip": "WishList.API\\Services\\WishService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T11:26:28.562Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "WishController.cs",
-              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Controllers\\WishController.cs",
-              "RelativeDocumentMoniker": "WishList.API\\Controllers\\WishController.cs",
-              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Controllers\\WishController.cs",
-              "RelativeToolTip": "WishList.API\\Controllers\\WishController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAawCEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T11:37:21.107Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GetWishRequest.cs",
-              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Contracts\\GetWishRequest.cs",
-              "RelativeDocumentMoniker": "WishList.API\\Contracts\\GetWishRequest.cs",
-              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Contracts\\GetWishRequest.cs",
-              "RelativeToolTip": "WishList.API\\Contracts\\GetWishRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T11:25:46.104Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CreateWishRequest.cs",
-              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Contracts\\CreateWishRequest.cs",
-              "RelativeDocumentMoniker": "WishList.API\\Contracts\\CreateWishRequest.cs",
-              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Contracts\\CreateWishRequest.cs",
-              "RelativeToolTip": "WishList.API\\Contracts\\CreateWishRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T11:11:46.159Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserEntity.cs",
-              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\Models\\UserEntity.cs",
-              "RelativeDocumentMoniker": "WishList.DataAccess.Postgres\\Models\\UserEntity.cs",
-              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\Models\\UserEntity.cs",
-              "RelativeToolTip": "WishList.DataAccess.Postgres\\Models\\UserEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T15:55:33.238Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "WishEntity.cs",
-              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\Models\\WishEntity.cs",
-              "RelativeDocumentMoniker": "WishList.DataAccess.Postgres\\Models\\WishEntity.cs",
-              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\Models\\WishEntity.cs",
-              "RelativeToolTip": "WishList.DataAccess.Postgres\\Models\\WishEntity.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAwwDMAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T15:55:34.723Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "WishDTO.cs",
-              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Dto\\WishDTO.cs",
-              "RelativeDocumentMoniker": "WishList.API\\Dto\\WishDTO.cs",
-              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Dto\\WishDTO.cs",
-              "RelativeToolTip": "WishList.API\\Dto\\WishDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T11:10:10.7Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "WishRepository.cs",
-              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\Repositories\\WishRepository.cs",
-              "RelativeDocumentMoniker": "WishList.DataAccess.Postgres\\Repositories\\WishRepository.cs",
-              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\Repositories\\WishRepository.cs",
-              "RelativeToolTip": "WishList.DataAccess.Postgres\\Repositories\\WishRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T11:15:20.496Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GetWishResponse.cs",
-              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Contracts\\GetWishResponse.cs",
-              "RelativeDocumentMoniker": "WishList.API\\Contracts\\GetWishResponse.cs",
-              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\Contracts\\GetWishResponse.cs",
-              "RelativeToolTip": "WishList.API\\Contracts\\GetWishResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T11:09:57.415Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IWishService.cs",
-              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\Interface\\IWishService.cs",
-              "RelativeDocumentMoniker": "WishList.DataAccess.Postgres\\Interface\\IWishService.cs",
-              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\Interface\\IWishService.cs",
-              "RelativeToolTip": "WishList.DataAccess.Postgres\\Interface\\IWishService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T11:26:20.646Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IWishRepository.cs",
-              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\Interface\\IWishRepository.cs",
-              "RelativeDocumentMoniker": "WishList.DataAccess.Postgres\\Interface\\IWishRepository.cs",
-              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\Interface\\IWishRepository.cs",
-              "RelativeToolTip": "WishList.DataAccess.Postgres\\Interface\\IWishRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T11:26:19.887Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "WishConfiguration.cs",
-              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\Configurations\\WishConfiguration.cs",
-              "RelativeDocumentMoniker": "WishList.DataAccess.Postgres\\Configurations\\WishConfiguration.cs",
-              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\Configurations\\WishConfiguration.cs",
-              "RelativeToolTip": "WishList.DataAccess.Postgres\\Configurations\\WishConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T11:20:46.638Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserConfiguration.cs",
-              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\Configurations\\UserConfiguration.cs",
-              "RelativeDocumentMoniker": "WishList.DataAccess.Postgres\\Configurations\\UserConfiguration.cs",
-              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\Configurations\\UserConfiguration.cs",
-              "RelativeToolTip": "WishList.DataAccess.Postgres\\Configurations\\UserConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T11:20:39.154Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "WishListConfiguration.cs",
-              "DocumentMoniker": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\Configurations\\WishListConfiguration.cs",
-              "RelativeDocumentMoniker": "WishList.DataAccess.Postgres\\Configurations\\WishListConfiguration.cs",
-              "ToolTip": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.DataAccess.Postgres\\Configurations\\WishListConfiguration.cs",
-              "RelativeToolTip": "WishList.DataAccess.Postgres\\Configurations\\WishListConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T11:25:25.59Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T13:45:23.154Z"
             }
           ]
         },

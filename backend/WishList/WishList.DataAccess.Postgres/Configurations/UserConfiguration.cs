@@ -8,11 +8,11 @@ public class UserConfiguration : IEntityTypeConfiguration<UserEntity>
 {
     public void Configure(EntityTypeBuilder<UserEntity> builder)
     {
-        /*builder.HasKey(a => a.Id);
+        builder.HasKey(a => a.Id);
 
-        builder. 
-            HasMany( a => a.Wish )
-               .WithOne(c => c.User);*/
+        //builder. 
+        //    HasMany( a => a.Wish )
+        //       .WithOne(c => c.User);
     }
 }
 

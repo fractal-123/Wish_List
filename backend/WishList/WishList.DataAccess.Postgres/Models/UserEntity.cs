@@ -2,18 +2,33 @@
 
 public class UserEntity
 {
-    /*public Guid Id { get; set; }
+    public UserEntity(string userName, string gender, string passwordHash, string email, int countWishList) 
+    {
+        UserName = userName;
+        Gender = gender;
+        PasswordHash = passwordHash;
+        Email = email;
+        CountWishList = countWishList;
+    }
 
-    public string UserName { get; private set; }
+    public Guid Id { get; set; }
+
+    public string UserName { get;  set; }
 
     public string Gender { get; set; } = string.Empty;
 
-    public string PasswordHash { get; private  set; }
+    public string PasswordHash { get;   set; }
 
-    public string Email { get; private set; }
+    public string Email { get;  set; }
 
-    //public int CountWishList { get; set; } 
+    public int CountWishList { get; set; } 
 
-    public List<WishEntity> Wish { get; set; } = [];
-*/
+    //public List<WishEntity> Wish { get; set; } = [];
+
+
+    public static UserEntity Create(string userName, string gender, string password, string email, int countWishList)
+    {
+        return new UserEntity(userName, gender, password, email, countWishList);
+    }
+
 }

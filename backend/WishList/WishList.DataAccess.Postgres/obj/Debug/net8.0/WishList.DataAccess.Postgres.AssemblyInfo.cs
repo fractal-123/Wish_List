@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WishList.DataAccess.Postgres")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa9caea15efff53e2d37dc0a8a8acc028053594a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79119e287e76f9ef4d2dc7a40f4fdab5d72da198")]
 [assembly: System.Reflection.AssemblyProductAttribute("WishList.DataAccess.Postgres")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WishList.DataAccess.Postgres")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

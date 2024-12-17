@@ -327,4 +327,4 @@ C:\Csharp\Wish_List\backend\WishList\WishList.API\obj\Debug\net8.0\ref\WishList.
 C:\Csharp\Wish_List\backend\WishList\WishList.API\bin\Debug\net8.0\WishList.API.staticwebassets.endpoints.json
 C:\Csharp\Wish_List\backend\WishList\WishList.API\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Csharp\Wish_List\backend\WishList\WishList.API\obj\Debug\net8.0\staticwebassets\msbuild.WishList.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Csharp\Wish_List\backend\WishList\WishList.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Csharp\WIsh_List\backend\WishList\WishList.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

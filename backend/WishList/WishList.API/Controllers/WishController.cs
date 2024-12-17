@@ -1,13 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
-using System.Runtime.CompilerServices;
 using WishList.API.Contracts;
 using WishList.API.Dto;
 using WishList.API.Services;
 using WishList.DataAccess.Postgres;
-using WishList.DataAccess.Postgres.Interface;
-using WishList.DataAccess.Postgres.Repositories;
 
 namespace WishList.API.Controllers
 {
@@ -25,7 +22,7 @@ namespace WishList.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateWishRequest request, CancellationToken clt)
         {
-            var wish = new WishEntity(/*request.UserID, */request.Name, request.Price, request.Description, request.Link);
+            var wish = new WishEntity(request.Name, request.Price, request.Description, request.Link);
 
             await _dbContext.AddAsync(wish, clt);
             await _dbContext.SaveChangesAsync(clt);
@@ -56,7 +53,7 @@ namespace WishList.API.Controllers
                 wishQuery = wishQuery.OrderBy(n => n.Created);
             }
             var wishDtos = await wishQuery
-                .Select(n => new WishDTO(n.Id,/*n.UserId , */n.Name, n.Price, n.Description, n.Link, n.Created))
+                .Select(n => new WishDTO(n.Id, n.Name, n.Price, n.Description, n.Link, n.Created))
                 .ToListAsync(clt);
 
             return Ok(new GetWishResponse(wishDtos));

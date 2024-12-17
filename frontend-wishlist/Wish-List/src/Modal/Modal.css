@@ -13,6 +13,7 @@
   opacity: 0;
   pointer-events: none;
   transition: 0.5s;
+  
 }
 
 .modal.active {
@@ -21,6 +22,7 @@
 }
 
 .modal__content {
+  display: flex;
   padding: 20px;
   border-radius: 12px;
   background-color: white;

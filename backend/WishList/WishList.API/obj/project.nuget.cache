@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XH8yXRWr3bk=",
+  "dgSpecHash": "vBeZgFH1dow=",
   "success": true,
-  "projectFilePath": "C:\\Csharp\\Wish_List\\backend\\WishList\\WishList.API\\WishList.API.csproj",
+  "projectFilePath": "C:\\Csharp\\WIsh_List\\backend\\WishList\\WishList.API\\WishList.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Алексей\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Алексей\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

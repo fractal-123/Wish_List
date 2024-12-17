@@ -44,7 +44,7 @@ html, body {
   margin-right: 100px;
 }
 
-/* Адаптивные стили для экранов с шириной до 768px */
+
 @media (max-width: 768px) {
   .bg-wishlist {
     flex-direction: column; /* Ставим элементы в столбик */
@@ -53,16 +53,16 @@ html, body {
   }
 
   .left-list, .right-list {
-    margin-left: 0; /* Убираем отступы */
+    margin-left: 0; 
     margin-right: 0;
-    padding: 10px; /* Уменьшаем внутренние отступы */
-    width: 100%; /* Растягиваем списки на всю ширину */
-    gap: 10px; /* Уменьшаем расстояние между элементами */
+    padding: 10px; 
+    width: 100%; 
+    gap: 10px; 
   }
 
   .click {
-    margin: 20px 0; /* Отступы сверху и снизу */
-    width: 100%; /* Занимает всю ширину экрана */
-    gap: 15px; /* Уменьшаем расстояние между кнопкой и фильтром */
+    margin: 20px 0; 
+    width: 100%; 
+    gap: 15px; 
   }
 }
