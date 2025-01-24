@@ -12,8 +12,8 @@ using WishList.DataAccess.Postgres;
 namespace WishList.DataAccess.Postgres.Migrations
 {
     [DbContext(typeof(WishListDbContext))]
-    [Migration("20241213134156_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250123091506_InitialCreate1")]
+    partial class InitialCreate1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -45,6 +45,9 @@ namespace WishList.DataAccess.Postgres.Migrations
                     b.Property<string>("PasswordHash")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<DateTime>("RegistrationDate")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("UserName")
                         .IsRequired()
@@ -78,9 +81,30 @@ namespace WishList.DataAccess.Postgres.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("numeric");
 
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Wish");
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Wishes");
+                });
+
+            modelBuilder.Entity("WishList.DataAccess.Postgres.WishEntity", b =>
+                {
+                    b.HasOne("WishList.DataAccess.Postgres.UserEntity", "User")
+                        .WithMany("Wishes")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("WishList.DataAccess.Postgres.UserEntity", b =>
+                {
+                    b.Navigation("Wishes");
                 });
 #pragma warning restore 612, 618
         }

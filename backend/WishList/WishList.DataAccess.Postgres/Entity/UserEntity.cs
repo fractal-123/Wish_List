@@ -2,6 +2,12 @@
 
 public class UserEntity
 {
+    public UserEntity(string userName,string passwordHash, string email)
+    {
+        UserName = userName;
+        PasswordHash = passwordHash;
+        Email = email;
+    }
     public UserEntity(string userName, string gender, string passwordHash, string email, int countWishList) 
     {
         UserName = userName;
@@ -21,14 +27,13 @@ public class UserEntity
 
     public string Email { get;  set; }
 
-    public int CountWishList { get; set; } 
+    public int CountWishList { get; set; }
+    public DateTime RegistrationDate { get; set; } = DateTime.UtcNow;
+
+    public List<WishEntity> Wishes { get; set; }
 
     //public List<WishEntity> Wish { get; set; } = [];
 
 
-    public static UserEntity Create(string userName, string gender, string password, string email, int countWishList)
-    {
-        return new UserEntity(userName, gender, password, email, countWishList);
-    }
 
 }

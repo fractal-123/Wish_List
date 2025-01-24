@@ -1,66 +1,94 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WishList.API.Dto;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using WishList.API.Contracts;
-using WishList.API.Dto;
-using WishList.API.Services;
 using WishList.DataAccess.Postgres;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Logging;
+using WishList.API.Abstraction;
+using WishList.API.Models;
 
 namespace WishList.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WishController : ControllerBase
+    public class WishController(IWishService wishes, ILogger<WishController> logger) : ControllerBase
     {
-        private readonly WishListDbContext _dbContext;
-        public WishController(WishListDbContext dbContext)
-        {
-            _dbContext = dbContext;
-            
-        }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateWishRequest request, CancellationToken clt)
+        public async Task<IActionResult> Create([FromBody] CreateEditWishDTO createWishDTO, CancellationToken clt)
         {
-            var wish = new WishEntity(request.Name, request.Price, request.Description, request.Link);
 
-            await _dbContext.AddAsync(wish, clt);
-            await _dbContext.SaveChangesAsync(clt);
+            var userIdString = HttpContext.Session.GetString("UserId");
+            if (string.IsNullOrEmpty(userIdString) || !Guid.TryParse(userIdString, out var userId))
+            {
+                return Unauthorized("User not logged in");
+            }
+            var result = await wishes.Create(createWishDTO, userId);
 
-            return Ok();
+            return Ok(result);
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetOptions([FromQuery] GetWishRequest request, CancellationToken clt)
+        [HttpGet("allWish")]
+        public async Task<IActionResult> GetAllWish(CancellationToken clt)
         {
-            var wishQuery = _dbContext.Wish
-                .Where(n => string.IsNullOrEmpty(request.Search) ||
-                n.Name.ToLower().Contains(request.Search.ToLower())); 
 
-            Expression<Func<WishEntity, object>> selectorKey = request.SortItem?.ToLower() switch
-            {
-                "date" => wish => wish.Created,
-                "name" => wish => wish.Name,
-                _ => wish => wish.Id,
-            };
+            logger.LogInformation("Method api/allWish GetAll started.");
 
-            if (request.SortOrder == "desc")
-            {
-                wishQuery = wishQuery.OrderByDescending(selectorKey);
-            }
-            else
-            {
-                wishQuery = wishQuery.OrderBy(n => n.Created);
-            }
-            var wishDtos = await wishQuery
-                .Select(n => new WishDTO(n.Id, n.Name, n.Price, n.Description, n.Link, n.Created))
-                .ToListAsync(clt);
+            var result = await wishes.GetAllWish();
 
-            return Ok(new GetWishResponse(wishDtos));
+            logger.LogInformation($"Method api/allWish GetAll finished. Result count: {result.Count}");
+
+            return Ok(new { wishes = result });
         }
-        
+
+        [HttpGet("auth-user-wishes")]
+        public async Task<IActionResult> GetUserWishes(CancellationToken clt)
+        {
+            // Получаем UserId из сессии
+            var userIdString = HttpContext.Session.GetString("UserId");
+            if (string.IsNullOrEmpty(userIdString) || !Guid.TryParse(userIdString, out var userId))
+            {
+                return Unauthorized("User not logged in");
+            }
+
+            // Загружаем желания пользователя
+            var result = await wishes.GetUserWishes(userId);
+
+            return Ok(new { wishes = result });
+        }
+
+        [HttpPut("update-wish")]
+        public async Task<IActionResult> UpdateWish(Guid wishId, [FromBody] CreateEditWishDTO editDTO, CancellationToken clt)
+        {
+            // Получаем ID пользователя из сессии
+            var userIdString = HttpContext.Session.GetString("UserId");
+            if (string.IsNullOrEmpty(userIdString) || !Guid.TryParse(userIdString, out var userId))
+            {
+                return Unauthorized("User not logged in");
+            }
+            var result = await wishes.Edit(editDTO, wishId);
+
+            return Ok(new { wishes = result });
 
 
 
-    }
+        }
+        [HttpDelete("delete-wish")]
+        public async Task<IActionResult> DeleteWish(Guid wishId, [FromBody] CreateEditWishDTO editDTO, CancellationToken clt)
+        {
+            // Получаем ID пользователя из сессии
+            var userIdString = HttpContext.Session.GetString("UserId");
+            if (string.IsNullOrEmpty(userIdString) || !Guid.TryParse(userIdString, out var userId))
+            {
+                return Unauthorized("User not logged in");
+            }
+            var result = await wishes.Edit(editDTO, wishId);
+
+            return Ok(new { wishes = result });
+
+        }
+    
+    } 
 }

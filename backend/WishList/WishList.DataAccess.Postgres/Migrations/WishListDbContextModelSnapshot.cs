@@ -39,9 +39,12 @@ namespace WishList.DataAccess.Postgres.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Password")
+                    b.Property<string>("PasswordHash")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<DateTime>("RegistrationDate")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("UserName")
                         .IsRequired()
@@ -75,9 +78,30 @@ namespace WishList.DataAccess.Postgres.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("numeric");
 
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Wish");
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Wishes");
+                });
+
+            modelBuilder.Entity("WishList.DataAccess.Postgres.WishEntity", b =>
+                {
+                    b.HasOne("WishList.DataAccess.Postgres.UserEntity", "User")
+                        .WithMany("Wishes")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("WishList.DataAccess.Postgres.UserEntity", b =>
+                {
+                    b.Navigation("Wishes");
                 });
 #pragma warning restore 612, 618
         }

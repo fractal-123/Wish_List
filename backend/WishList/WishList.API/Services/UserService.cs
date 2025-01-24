@@ -1,18 +1,22 @@
 ﻿using WishList.DataAccess.Postgres;
-using WishList.DataAccess.Postgres.Interface;
+using WishList.API.Abstraction;
+using Microsoft.EntityFrameworkCore;
+using WishList.API.Dto;
+using Mapster;
+
 
 namespace WishList.API.Services
 {
-    public class UserService: IUserService
+    public class UserService(WishListDbContext context) : IUserService
     {
-        private readonly IUserRepository _userRepository;
-        public UserService(IUserRepository userRepository)
+        public async Task<List<UserDTO>> GetAllUser()
         {
-            _userRepository = userRepository;
+            var userEntity = await context.Users
+                .AsNoTracking()
+                .ToListAsync();
+
+            return userEntity.Select(x => x.Adapt<UserDTO>()).ToList(); 
         }
-        public async Task<List<UserEntity>> GetAllUser()
-        {
-            return await _userRepository.GetUser();
-        }
+
     }
 }

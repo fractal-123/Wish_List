@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Linq.Expressions;
 using WishList.API.Contracts;
-using WishList.API.Dto;
-using WishList.API.Services;
 using WishList.DataAccess.Postgres;
+using WishList.API.Dto;
 
 namespace WishList.API.Controllers
 {
@@ -13,43 +11,94 @@ namespace WishList.API.Controllers
     public class UserController : ControllerBase
     {
         private readonly WishListDbContext _dbContext;
+        private readonly PasswordService _passwordService;
+
+
         public UserController(WishListDbContext dbContext)
         {
             _dbContext = dbContext;
+            _passwordService = new PasswordService();
 
         }
+
         [HttpPost]
-        public async Task<IActionResult> CreateUser([FromBody] CreateUserRequest request, CancellationToken clt)
+        [Route("register")]
+        public async Task<IActionResult> RegisterUser([FromBody] RegistrationUserDTO registrationUser, CancellationToken clt)
         {
-            var user = new UserEntity(request.UserName, request.Gender, request.Password, request.Email, request.CountWishList);
+            var existingUser = await _dbContext.Users
+                .AsNoTracking()
+                .FirstOrDefaultAsync(u => u.Email == registrationUser.Email, clt);
 
-            await _dbContext.AddAsync(user, clt);
-            await _dbContext.SaveChangesAsync(clt);
+            if (existingUser != null)
+            {
+                return BadRequest(new { message = "Этот email уже используется." });
+            }
 
-            return Ok();
+            var hashedPassword = _passwordService.HashPassword(registrationUser.PasswordHash);
+            var user = new RegistrationUserDTO(registrationUser.UserName, hashedPassword, registrationUser.Email);
+
+            try
+            {
+                await _dbContext.AddAsync(user, clt);
+                await _dbContext.SaveChangesAsync(clt);
+
+
+                return Ok(new { message = "Регистрация успешна." });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Во время регистрации произошла ошибка.", details = ex.Message });
+            }
         }
-        [HttpGet]
-        public async Task<IActionResult> GetOptions([FromQuery] GetUserRequest request, CancellationToken clt)
-        {
-            var userQuery = _dbContext.Users
-               .Where(n => string.IsNullOrEmpty(request.Search) ||
-               n.UserName.ToLower().Contains(request.Search.ToLower()));
 
-            Expression<Func<UserEntity, object>> selectorKey = request.SortItem?.ToLower() switch
-            {   "countWishList" => user => user.CountWishList,
-                "name" => user => user.UserName,
-                _ => user => user.Id,
-            };
-            if (request.SortOrder == "desc")
+        [HttpPost]
+        [Route("login")]
+        public async Task<IActionResult> LoginUser([FromBody] LoginDto login, CancellationToken clt)
+        {
+
+            if (string.IsNullOrWhiteSpace(login.Email) || string.IsNullOrWhiteSpace(login.PasswordHash))
             {
-                userQuery = userQuery.OrderByDescending(selectorKey);
+                return BadRequest(new { message = "Email и пароль обязательны." });
             }
-            else
+
+            var user = await _dbContext.Users
+                .FirstOrDefaultAsync(u => u.Email == login.Email);
+
+            if (user == null)
             {
-                userQuery = userQuery.OrderBy(n => n.CountWishList);
+                return BadRequest(new { message = "Пользователь не найден." });
             }
-            var userDtos = await userQuery
-                .Select(n => new UserDTO(n.UserName, n.Gender, n.PasswordHash, n.Email, n.CountWishList))
+
+            bool isPasswordValid = _passwordService.VerifyPassword(user.PasswordHash, login.PasswordHash);
+
+            if (!isPasswordValid)
+            {
+                return BadRequest(new { message = "Неверный пароль." });
+            }
+            HttpContext.Session.SetString("UserId", user.Id.ToString());
+
+            return Ok(new { message = "Авторизация успешна." });
+        }
+
+
+
+        [HttpGet]
+        [Route("get-all-users")]
+        public async Task<IActionResult> GetOptions(CancellationToken clt)
+        {
+
+            var userDtos = await _dbContext.Users
+                .AsNoTracking()
+                .Select(u => new UserDTO
+                (
+                    u.Id,
+                    u.UserName,
+                    u.Email,
+                    u.PasswordHash,
+                    u.Gender,
+                    u.RegistrationDate,
+                    u.CountWishList
+                ))
                 .ToListAsync(clt);
 
             return Ok(new GetUserResponse(userDtos));

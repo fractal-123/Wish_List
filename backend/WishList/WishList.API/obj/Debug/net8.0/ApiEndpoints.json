@@ -1,15 +1,25 @@
 [
   {
     "ContainingType": "WishList.API.Controllers.UserController",
-    "Method": "CreateUser",
-    "RelativePath": "User",
+    "Method": "GetOptions",
+    "RelativePath": "User/get-all-users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WishList.API.Controllers.UserController",
+    "Method": "LoginUser",
+    "RelativePath": "User/login",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "WishList.API.Contracts.CreateUserRequest",
+        "Name": "login",
+        "Type": "WishList.API.Dto.LoginDto",
         "IsRequired": true
       }
     ],
@@ -17,26 +27,16 @@
   },
   {
     "ContainingType": "WishList.API.Controllers.UserController",
-    "Method": "GetOptions",
-    "RelativePath": "User",
-    "HttpMethod": "GET",
+    "Method": "RegisterUser",
+    "RelativePath": "User/register",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Search",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "SortItem",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "SortOrder",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "registrationUser",
+        "Type": "WishList.API.Dto.RegistrationUserDTO",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -50,8 +50,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "WishList.API.Contracts.CreateWishRequest",
+        "Name": "createWishDTO",
+        "Type": "WishList.API.Models.CreateEditWishDTO",
         "IsRequired": true
       }
     ],
@@ -59,26 +59,41 @@
   },
   {
     "ContainingType": "WishList.API.Controllers.WishController",
-    "Method": "GetOptions",
-    "RelativePath": "Wish",
+    "Method": "GetAllWish",
+    "RelativePath": "Wish/allWish",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WishList.API.Controllers.WishController",
+    "Method": "GetUserWishes",
+    "RelativePath": "Wish/auth-user-wishes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WishList.API.Controllers.WishController",
+    "Method": "UpdateWish",
+    "RelativePath": "Wish/update-wish",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Search",
-        "Type": "System.String",
+        "Name": "wishId",
+        "Type": "System.Guid",
         "IsRequired": false
       },
       {
-        "Name": "SortItem",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "SortOrder",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "editDTO",
+        "Type": "WishList.API.Models.CreateEditWishDTO",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

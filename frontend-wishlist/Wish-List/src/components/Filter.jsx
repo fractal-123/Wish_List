@@ -3,7 +3,7 @@ import { Input, Select } from "@chakra-ui/react";
 export default function Filters({filter, setFilter}){
 
 return(
-    <div class='flex flex-col gap-5 font-semibold' >
+    <div className='flex flex-col gap-5 font-semibold' >
           <Input
             border='1px solid gray'
             background='white'
