@@ -86,19 +86,45 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/CreateEditWishDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateEditWishDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateEditWishDTO"
+                "type": "object",
+                "properties": {
+                  "Name": {
+                    "type": "string"
+                  },
+                  "Link": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string"
+                  },
+                  "Price": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "imageFile": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "Name": {
+                  "style": "form"
+                },
+                "Link": {
+                  "style": "form"
+                },
+                "Description": {
+                  "style": "form"
+                },
+                "Price": {
+                  "style": "form"
+                },
+                "imageFile": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -174,10 +200,68 @@
           }
         }
       }
+    },
+    "/Wish/delete-wish": {
+      "delete": {
+        "tags": [
+          "Wish"
+        ],
+        "parameters": [
+          {
+            "name": "wishId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancellationToken"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancellationToken"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancellationToken"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
+      "CancellationToken": {
+        "type": "object",
+        "properties": {
+          "isCancellationRequested": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "canBeCanceled": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "waitHandle": {
+            "$ref": "#/components/schemas/WaitHandle"
+          }
+        },
+        "additionalProperties": false
+      },
       "CreateEditWishDTO": {
         "type": "object",
         "properties": {
@@ -185,20 +269,23 @@
             "type": "string",
             "nullable": true
           },
-          "description": {
+          "link": {
             "type": "string",
             "nullable": true
           },
-          "link": {
+          "description": {
             "type": "string",
             "nullable": true
           },
           "price": {
             "type": "number",
-            "format": "double",
-            "nullable": true
+            "format": "double"
           }
         },
+        "additionalProperties": false
+      },
+      "IntPtr": {
+        "type": "object",
         "additionalProperties": false
       },
       "LoginDto": {
@@ -229,6 +316,32 @@
           "passwordHash": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SafeWaitHandle": {
+        "type": "object",
+        "properties": {
+          "isClosed": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isInvalid": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "WaitHandle": {
+        "type": "object",
+        "properties": {
+          "handle": {
+            "$ref": "#/components/schemas/IntPtr"
+          },
+          "safeWaitHandle": {
+            "$ref": "#/components/schemas/SafeWaitHandle"
           }
         },
         "additionalProperties": false

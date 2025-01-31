@@ -19,7 +19,7 @@
     "Parameters": [
       {
         "Name": "login",
-        "Type": "WishList.API.Dto.LoginDto",
+        "Type": "WishList.DataAccess.Postgres.Models.LoginDto",
         "IsRequired": true
       }
     ],
@@ -35,7 +35,7 @@
     "Parameters": [
       {
         "Name": "registrationUser",
-        "Type": "WishList.API.Dto.RegistrationUserDTO",
+        "Type": "WishList.DataAccess.Postgres.Models.RegistrationUserDTO",
         "IsRequired": true
       }
     ],
@@ -50,9 +50,29 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "createWishDTO",
-        "Type": "WishList.API.Models.CreateEditWishDTO",
-        "IsRequired": true
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Link",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Price",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "imageFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -79,6 +99,27 @@
   },
   {
     "ContainingType": "WishList.API.Controllers.WishController",
+    "Method": "DeleteWish",
+    "RelativePath": "Wish/delete-wish",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "wishId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "clt",
+        "Type": "System.Threading.CancellationToken",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WishList.API.Controllers.WishController",
     "Method": "UpdateWish",
     "RelativePath": "Wish/update-wish",
     "HttpMethod": "PUT",
@@ -92,7 +133,7 @@
       },
       {
         "Name": "editDTO",
-        "Type": "WishList.API.Models.CreateEditWishDTO",
+        "Type": "WishList.DataAccess.Postgres.Models.CreateEditWishDTO",
         "IsRequired": true
       }
     ],

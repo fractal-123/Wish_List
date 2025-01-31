@@ -2,19 +2,12 @@
 
 public class UserEntity
 {
-    public UserEntity(string userName,string passwordHash, string email)
+    public UserEntity() { }
+    public UserEntity(string username, string email, string passwordHash)
     {
-        UserName = userName;
-        PasswordHash = passwordHash;
+        UserName = username;
         Email = email;
-    }
-    public UserEntity(string userName, string gender, string passwordHash, string email, int countWishList) 
-    {
-        UserName = userName;
-        Gender = gender;
         PasswordHash = passwordHash;
-        Email = email;
-        CountWishList = countWishList;
     }
 
     public Guid Id { get; set; }
@@ -23,7 +16,7 @@ public class UserEntity
 
     public string Gender { get; set; } = string.Empty;
 
-    public string PasswordHash { get;   set; }
+    public string PasswordHash { get; set; }
 
     public string Email { get;  set; }
 

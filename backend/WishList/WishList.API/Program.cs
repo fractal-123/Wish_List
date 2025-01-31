@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
 using WishList.API.Abstraction;
 using WishList.API.Services;
@@ -31,8 +32,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<WishListDbContext>();
 builder.Services.AddScoped<IWishService, WishService>();
-
-
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<PasswordService>();
 
 builder.Services.AddDbContext<WishListDbContext>(
     options =>
@@ -41,7 +42,7 @@ builder.Services.AddDbContext<WishListDbContext>(
     });
 
 var app = builder.Build();
-
+app.UseStaticFiles();
 app.UseCors("AllowFrontend");
 app.UseSwagger();
 app.UseSwaggerUI();

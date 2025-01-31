@@ -1,10 +1,10 @@
-﻿using WishList.API.Dto;
+﻿using WishList.DataAccess.Postgres.Models;
 
 namespace WishList.API.Abstraction;
 
-interface IUserService
+public interface IUserService
 {
     Task<List<UserDTO>> GetAllUser();
-    //Task<UserResponse> Register(UserRegisterDto userRegisterModel);
-    //Task<UserResponse> Login(UserLoginDto userLoginDto);  
+    Task<string> Register(RegistrationUserDTO userRegisterModel);
+    Task<string> Login(LoginDto userLoginDto, HttpContext httpContext);  
 }

@@ -1,12 +1,125 @@
 {
   "Version": 1,
-  "Hash": "jnQdU2tKAt705JQzc/dc/syAocA1viQ4+580U2zunj8=",
+  "Hash": "auUoN8CmU/kp1qFkDVzL3/wkwM2XFg+Re8YLkvZ8B5g=",
   "Source": "WishList.API",
   "BasePath": "_content/WishList.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "WishList.API\\wwwroot",
+      "Source": "WishList.API",
+      "ContentRoot": "C:\\Csharp\\WIsh_List\\backend\\WishList\\WishList.API\\wwwroot\\",
+      "BasePath": "_content/WishList.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Csharp\\WIsh_List\\backend\\WishList\\WishList.API\\wwwroot\\uploads\\07ea58ad-c8c6-459d-af3c-b6b40149b672.jpg",
+      "SourceId": "WishList.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Csharp\\WIsh_List\\backend\\WishList\\WishList.API\\wwwroot\\",
+      "BasePath": "_content/WishList.API",
+      "RelativePath": "uploads/07ea58ad-c8c6-459d-af3c-b6b40149b672#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "i7swwunhp4",
+      "Integrity": "zl6QiexJkzkTdLHVaH5JXC8PRlg2wPm4b6scqSXhvqM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\07ea58ad-c8c6-459d-af3c-b6b40149b672.jpg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "uploads/07ea58ad-c8c6-459d-af3c-b6b40149b672.i7swwunhp4.jpg",
+      "AssetFile": "C:\\Csharp\\WIsh_List\\backend\\WishList\\WishList.API\\wwwroot\\uploads\\07ea58ad-c8c6-459d-af3c-b6b40149b672.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "421800"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zl6QiexJkzkTdLHVaH5JXC8PRlg2wPm4b6scqSXhvqM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 14:38:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i7swwunhp4"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/07ea58ad-c8c6-459d-af3c-b6b40149b672.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zl6QiexJkzkTdLHVaH5JXC8PRlg2wPm4b6scqSXhvqM="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/07ea58ad-c8c6-459d-af3c-b6b40149b672.jpg",
+      "AssetFile": "C:\\Csharp\\WIsh_List\\backend\\WishList\\WishList.API\\wwwroot\\uploads\\07ea58ad-c8c6-459d-af3c-b6b40149b672.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "421800"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zl6QiexJkzkTdLHVaH5JXC8PRlg2wPm4b6scqSXhvqM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 30 Jan 2025 14:38:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zl6QiexJkzkTdLHVaH5JXC8PRlg2wPm4b6scqSXhvqM="
+        }
+      ]
+    }
+  ]
 }

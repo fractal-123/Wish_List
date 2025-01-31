@@ -1,13 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using WishList.API.Dto;
-using Microsoft.EntityFrameworkCore;
-using System.Linq.Expressions;
-using WishList.API.Contracts;
-using WishList.DataAccess.Postgres;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WishList.API.Abstraction;
-using WishList.API.Models;
+using WishList.API.Services;
+using WishList.DataAccess.Postgres.Models;
 
 namespace WishList.API.Controllers
 {
@@ -17,18 +13,37 @@ namespace WishList.API.Controllers
     {
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateEditWishDTO createWishDTO, CancellationToken clt)
+        [Consumes("multipart/form-data")]
+        public async Task<IActionResult> Create([FromForm] CreateEditWishDTO createWishDTO, IFormFile imageFile, CancellationToken clt)
         {
-
+            logger.LogInformation($"хуууууууууууууууууууууууууууууууууууууууууууууууууууууууй{imageFile}");
             var userIdString = HttpContext.Session.GetString("UserId");
             if (string.IsNullOrEmpty(userIdString) || !Guid.TryParse(userIdString, out var userId))
             {
                 return Unauthorized("User not logged in");
             }
-            var result = await wishes.Create(createWishDTO, userId);
+            logger.LogInformation($"хуууууууууууууууууууууууууууууууууууууууууууууууууууууууй{ imageFile.FileName}");
+            if (imageFile == null )
+            {
+                return Ok(new { Message = "Файл был загружен." });
+            }
+            try
+            {
+                var wishDto = await wishes.Create(createWishDTO, imageFile, userId);
+                
+                return Ok(wishDto);
 
-            return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new
+                {
+                    Message = ex.Message,
+                    InnerException = ex.InnerException?.Message
+                });
+            }
         }
+
 
         [HttpGet("allWish")]
         public async Task<IActionResult> GetAllWish(CancellationToken clt)
@@ -76,7 +91,7 @@ namespace WishList.API.Controllers
 
         }
         [HttpDelete("delete-wish")]
-        public async Task<IActionResult> DeleteWish(Guid wishId, [FromBody] CreateEditWishDTO editDTO, CancellationToken clt)
+        public async Task<IActionResult> DeleteWish(Guid wishId, [FromBody] CancellationToken clt)
         {
             // Получаем ID пользователя из сессии
             var userIdString = HttpContext.Session.GetString("UserId");
@@ -84,11 +99,13 @@ namespace WishList.API.Controllers
             {
                 return Unauthorized("User not logged in");
             }
-            var result = await wishes.Edit(editDTO, wishId);
+            var result = await wishes.Delete(wishId);
 
             return Ok(new { wishes = result });
 
         }
-    
+
+        
+
     } 
 }

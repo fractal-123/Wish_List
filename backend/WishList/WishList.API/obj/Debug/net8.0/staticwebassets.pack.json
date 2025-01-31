@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Csharp\\WIsh_List\\backend\\WishList\\WishList.API\\wwwroot\\uploads\\07ea58ad-c8c6-459d-af3c-b6b40149b672.jpg",
+      "PackagePath": "staticwebassets\\uploads\\07ea58ad-c8c6-459d-af3c-b6b40149b672.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WishList.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WishList.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.WishList.API.props",
+      "PackagePath": "build\\WishList.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WishList.API.props",
+      "PackagePath": "buildMultiTargeting\\WishList.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.WishList.API.props",
+      "PackagePath": "buildTransitive\\WishList.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
